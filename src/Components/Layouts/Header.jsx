@@ -1,11 +1,16 @@
 import React from 'react';
 import Navigation from "./Navigation";
+import { ReactComponent as ReactLogo} from "../../images/Logo (1).svg"
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="w-full h-[100vh] bg-[#1A1E29] flex items-center justify-center">
+        <header className="h-[103px] w-4/5 flex justify-between items-center  mt-[40px] ">
+            <Link className="py-[8px] px-[26px]  rounded-[20px] bg-[#132D46] flex justify-center items-center text-[#01C38E] text-[18px]" to="/" >ورود / ثبت نام</Link>
+
             <Navigation/>
-        </div>
+            <ReactLogo className="w-[100px]"/>
+        </header>
     );
 };
 
