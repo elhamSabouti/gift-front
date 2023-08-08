@@ -28,7 +28,7 @@ const Categories = () => {
             <p className="text-[#01C38E] text-[29px]">محصولات</p>
             <ul className="flex w-auto flex-wrap justify-center items-center gap-[22px] h-[70px] mt-[10px] flex-row-reverse">
                 {data.map((value,index)=>(
-                        <Category text={value.title} id={index} link={value.link}/>
+                        <Category props={value} id={index}/>
                     ))}
             </ul>
         </div>
