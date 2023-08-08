@@ -1,7 +1,7 @@
 import React from 'react';
-import Product from "./Product";
+import Category from "./Category";
 
-const Products = () => {
+const Categories = () => {
     const data=[
         {
             "title": "همه",
@@ -24,15 +24,15 @@ const Products = () => {
             "link": "http://prohaska.biz/est-distinctio-occaecati-sed-animi-totam-dolor",
     }];
     return (
-        <div  className="flex-col items-between justify-center flex-wrap h-auto  mt-[10px] max-w-[85%]">
+        <div  className="flex-col items-between justify-center flex-wrap h-auto  mt-[30px] max-w-[85%]">
             <p className="text-[#01C38E] text-[29px]">محصولات</p>
-            <ul className="flex w-auto flex-wrap justify-center items-center gap-[22px] h-[70px] mt-[5px] flex-row-reverse">
+            <ul className="flex w-auto flex-wrap justify-center items-center gap-[22px] h-[70px] mt-[10px] flex-row-reverse">
                 {data.map((value,index)=>(
-                        <Product text={value.title} id={index}/>
+                        <Category text={value.title} id={index} link={value.link}/>
                     ))}
             </ul>
         </div>
     );
 };
 
-export default Products;
+export default Categories;
