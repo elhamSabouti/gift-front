@@ -23,36 +23,6 @@ const Adds = () => {
     useEffect(()=>{
         getBanners();
     },[]);
-    const data=[
-        {
-            "title": "گیفت کارت نتفیلیکس",
-            "description": "استریم موزیک",
-            "link": "http://prohaska.biz/est-distinctio-occaecati-sed-animi-totam-dolor",
-            "color_from":"#132D46" ,
-            "color_main": "#1A1E29",
-            "color_to":  "#E50914",
-            "logo_name": "netflix-text-logo",
-            "logo":netflix,
-            },
-        {
-            "title": "گیفت کارت سوندکلود",
-            "description": "استریم موزیک",
-            "link": "http://prohaska.biz/est-distinctio-occaecati-sed-animi-totam-dolor",
-            "color_from":"#132D46" ,
-            "color_main": "#1A1E29",
-            "color_to":  "#F9570E",
-            "logo_name": "netflix-text-logo",
-            "logo":soundCloud,
-        },{
-            "title": "گیفت کارت اسپاتیفای",
-            "description": "استریم موزیک",
-            "link": "http://prohaska.biz/est-distinctio-occaecati-sed-animi-totam-dolor",
-            "color_from":"#132D46" ,
-            "color_main": "#1A1E29",
-            "color_to":  "#1ED760",
-            "logo_name": "netflix-text-logo",
-            "logo":spotify,
-        }];
     function SampleNextArrow(props) {
         return (
               <img src={left}  {...props} className={'prev absolute left-[30px] top-[38%] z-40 w-[22px] cursor-pointer' }/>
@@ -72,6 +42,10 @@ const Adds = () => {
         arrows: true,
         prevArrow: <SampleNextArrow />,
         nextArrow: <SamplePrevArrow />,
+        rtl:true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+
     };
     return (
         <div className="w-[89%] mt-[30px] flex items-center justify-center ">
