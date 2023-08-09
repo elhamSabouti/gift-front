@@ -42,12 +42,12 @@ const Adds = () => {
         }];
     function SampleNextArrow(props) {
         return (
-              <img src={left}  {...props} className={'prev absolute left-[25px] top-[38%] z-40 w-[22px] cursor-pointer' }/>
+              <img src={left}  {...props} className={'prev absolute left-[30px] top-[38%] z-40 w-[22px] cursor-pointer' }/>
         );
     }
     function SamplePrevArrow(props) {
         return (
-            <img src={right}  {...props} className={'next absolute right-[25px] top-[38%] z-40 w-[22px] cursor-pointer' }/>
+            <img src={right}  {...props} className={'next absolute right-[30px] top-[38%] z-40 w-[22px] cursor-pointer' }/>
         );
     }
     const settings = {
@@ -61,8 +61,8 @@ const Adds = () => {
         nextArrow: <SamplePrevArrow />,
     };
     return (
-        <div className="w-[85%] mt-[10px]">
-            <Slider {...settings} className=" w-full mt-[20px] flex relative">
+        <div className="w-[89%] mt-[30px] flex items-center justify-center ">
+            <Slider {...settings} className=" w-full  flex ">
             {data.map((value)=>(
             <Banner props={value}/>
             ))}
