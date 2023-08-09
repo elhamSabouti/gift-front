@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = ({props}) => {
     return (
-        <div className={`w-[375px] h-[120px] bg-[#132D46] rounded-[17px] border-b-2  flex justify-center items-center`} style={{borderBottomColor:props.border_color}}>
+        <div className={`w-[399px] h-[109px] bg-[#132D46] rounded-[17px] border-b-2  flex justify-center items-center`} style={{borderBottomColor:props.border_color}}>
             <div className="text-white flex flex-col w-[50%] h-full text-[14px] gap-[18px] justify-center items-center">
                 <p>{props.price}</p>
                 <button className="bg-[#00A678] w-[140px] h-[35px]  rounded-[17px] flex items-center justify-center"> سفارش / مشاهده</button>

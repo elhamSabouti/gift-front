@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import Banner from "./Banner";
 import  netflix from "./../../../images/logos (1).png";
 import  soundCloud from "./../../../images/logos (2).png";
@@ -8,8 +8,21 @@ import  right from "./../../../images/arrow-right (1).png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import API from "../../../Api/useApi";
 
 const Adds = () => {
+    const [banners,setBanners]=useState(null);
+    const  getBanners =async () => {
+        try {
+            const banner= await API.get("banner");
+            setBanners(banner.data.data)
+        }catch (e) {
+
+        }
+    }
+    useEffect(()=>{
+        getBanners();
+    },[]);
     const data=[
         {
             "title": "گیفت کارت نتفیلیکس",
@@ -63,7 +76,7 @@ const Adds = () => {
     return (
         <div className="w-[89%] mt-[30px] flex items-center justify-center ">
             <Slider {...settings} className=" w-full  flex ">
-            {data.map((value)=>(
+            {banners && banners.map((value)=>(
             <Banner props={value}/>
             ))}
             </Slider>
