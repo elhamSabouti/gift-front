@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ProductCard from "./ProductCard";
 import netflix from "../../images/48967 1 (2).png";
-import axios from "axios";
 const Products = () => {
 
     const data=[

@@ -40,12 +40,10 @@ const Adds = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow: <SampleNextArrow />,
-        nextArrow: <SamplePrevArrow />,
-        rtl:true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         autoplay: true,
         autoplaySpeed: 5000,
-
     };
     return (
         <div className="w-[89%] mt-[30px] flex items-center justify-center ">
