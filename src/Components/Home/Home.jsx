@@ -1,9 +1,8 @@
 import React from 'react';
 import Header from "../Layouts/Header";
-import Slider from "react-slick";
 import Adds from "./Adds/Adds";
 import Categories from "./Categories/Categories";
-import Products from "../Products/Products";
+import Products from "./Products/Products";
 import Dots from "./Dots";
 
 const Home = () => {

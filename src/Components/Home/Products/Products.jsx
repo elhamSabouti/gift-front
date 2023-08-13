@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ProductCard from "./ProductCard";
-import netflix from "../../images/48967 1 (2).png";
-import API from "../../Api/useApi";
+import netflix from "../../../images/48967 1 (2).png";
+import API from "../../../Api/useApi";
 const Products = () => {
     const [products,setProducts]=useState(null);
     const  getProducts =async () => {
