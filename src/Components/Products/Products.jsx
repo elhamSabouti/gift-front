@@ -1,7 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import ProductCard from "./ProductCard";
 import netflix from "../../images/48967 1 (2).png";
+import API from "../../Api/useApi";
 const Products = () => {
+    const [products,setProducts]=useState(null);
+    const  getProducts =async () => {
+        try {
+            const product= await API.get("product");
+            setProducts(product.data.data)
+        }catch (e) {
+        }
+    }
+    useEffect(()=>{
+        getProducts();
+    },[]);
 
     const data=[
         {
@@ -67,7 +79,7 @@ const Products = () => {
   ];
     return (
         <div className="w-auto h-auto flex gap-[23px] flex-wrap mt-[27px] justify-center  ">
-            {data.map((value )=>(
+            {products && products.map((value )=>(
                 <ProductCard props={value}/>
             ))}
         </div>
