@@ -7,7 +7,7 @@ import Dots from "./Dots";
 
 const Home = () => {
     return (
-        <div className="w-full min-h-[100vh] bg-[#1A1E29] flex items-center justify-start flex-col">
+        <div className="w-full min-h-[100vh] bg-[#1A1E29] flex items-center justify-start flex-col relative">
             <Header/>
             <Adds/>
             <Categories/>

@@ -7,7 +7,7 @@ const Navigation = () => {
             <ul className="flex flex items-center justify-between flex-row-reverse w-full h-full text-[20px] ">
                 <li><NavLink className={(data)=>checkActive(data) } to="/" >صفحه اصلی</NavLink></li>
                 <li><NavLink className={(data)=>checkActive(data)} to="/about">سبد خرید</NavLink></li>
-                <li><NavLink className={(data)=>checkActive(data)} to="/about">محصولات</NavLink></li>
+                <li><NavLink className={(data)=>checkActive(data)} to="/products">محصولات</NavLink></li>
                 <li><NavLink className={(data)=>checkActive(data)} to="/about">درباره ما</NavLink></li>
                 <li><NavLink className={(data)=>checkActive(data)} to="/about">سوالات متداول</NavLink></li>
             </ul>
