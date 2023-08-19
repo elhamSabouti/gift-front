@@ -8,7 +8,7 @@ const PeriodNav = () => {
     const  getPeriod =async () => {
         try {
             const period= await API.get("periods");
-            setPeriods(period.data.data)
+            setPeriods(period.data)
         }catch (e) {
         }
     }
@@ -21,7 +21,7 @@ const PeriodNav = () => {
             <li className=" w-full flex flex-col justify-center items-center"><button className="text-[18px] mr-[45px] text-[#01C38E] flex justify-end w-3/5 " onClick={()=>(periodFlag===false?setPeriodFlag(true):setPeriodFlag(false))}>دوره زمانی</button></li>
             <ul className={`w-full h-auto list-none ${periodFlag?`flex`:`hidden`} flex-col items-center text-white text-[15px] gap-[15px] mt-[8px] `}>
                 {periods && periods.map((value,k)=>(
-                    <FilterProduct value={value.id} key={k} />
+                    <FilterProduct value={value.period_title} key={k} />
                 ))}
             </ul>
         </ul>
